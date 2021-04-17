@@ -1,0 +1,52 @@
+﻿@model WebApi.Backend.models.Cuenta;
+@{ ViewData["Title"] = "Adicionar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+<h2>AAdicionar Cuenta <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+
+<form asp-action="Adicionar" method="post">
+    <div class="form-group">
+        <label for="NroCuenta">NroCuenta:</label>
+        <input class="form-control" name="NroCuenta" />
+    </div>
+    <div class="form-group">
+        <label for="Moneda">Moneda:</label>
+        <input class="form-control" name="Moneda" />
+    </div>
+    <div class="form-group">
+        <label for="Nombre">Nombre:</label>
+        <input class="form-control" name="Nombre" />
+    </div>
+    <div class="form-group">
+        <label for="Tipo">Tipo:</label>
+        <input class="form-control" name="Tipo" />
+    </div>
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
+        <button type="submit" class="btn btn-sm btn-danger">Cancelar</button>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <h2>Reservation</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Start Location</th>
+                <th>End Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.NroCuenta</td>
+                <td>@Model.Tipo</td>
+                <td>@Model.Saldo</td>
+                <td>@Model.Moneda</td>
+            </tr>
+        </tbody>
+    </table>
+}

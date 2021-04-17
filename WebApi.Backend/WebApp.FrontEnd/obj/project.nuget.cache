@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pD9M357zhfw3vWCSitKadE46wo0/uncM6xZVnFa4tSQqZ6d2oFmaAHc9LufWRdMxXYehs4f3QvsqFAa5WtZKPw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gonzalo\\source\\repos\\Proyecto BCP\\WebApi.Backend\\WebApp.FrontEnd\\WebApp.FrontEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gonzalo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
