@@ -8,7 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using WebApi.Backend.models;
+//using WebApi.Backend.models;
 using WebApp.FrontEnd.Models;
 
 namespace WebApp.FrontEnd.Controllers
@@ -27,7 +27,7 @@ namespace WebApp.FrontEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> adicionar(Cuenta c)
         {
-            c.Saldo = 0;
+           // c.Saldo = 0;
     
             Cuenta received= new Cuenta();
             using (var httpClient = new HttpClient())

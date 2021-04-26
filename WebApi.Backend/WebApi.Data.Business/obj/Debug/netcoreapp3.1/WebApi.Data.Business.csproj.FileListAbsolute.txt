@@ -1,0 +1,14 @@
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.csprojAssemblyReference.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.AssemblyInfo.cs
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Data.Business.deps.json
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Data.Business.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Data.Business.pdb
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Data.Access.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Models.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Data.Access.pdb
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\bin\Debug\netcoreapp3.1\WebApi.Models.pdb
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.csproj.CopyComplete
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Data.Business\obj\Debug\netcoreapp3.1\WebApi.Data.Business.pdb

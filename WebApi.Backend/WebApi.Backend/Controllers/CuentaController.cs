@@ -27,15 +27,16 @@ namespace WebApi.Backend.Controllers
         public async Task<ActionResult<IEnumerable>> Get()
         {
             return await _repository.GetAll();
-        } 
+        }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task<Object> Get(String  id)
+        public object Get(String id)
         {
-            var response = await _repository.GetByCuenta(id);
-            if (response == null) { return NotFound(); }
-            return response;
+            // var response = await _repository.GetByCuenta(id);
+            //  if (response == null) { return NotFound(); }
+            //return response;
+            return null;
         }
 
         /********************************* POST api/cuenta   1: Inserta nueva cuenta*******************+++++*/
@@ -48,10 +49,10 @@ namespace WebApi.Backend.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public async Task Delete(String id)
+        public void Delete(String id)
         {
 
-           await _repository.DeleteByCuenta(id);
+            // await _repository.DeleteByCuenta(id);
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApi.Backend.models;
+//using WebApi.Backend.models;
+using WebApp.FrontEnd.Models;
 
 namespace WebApi.Backend.Data
 {
@@ -22,7 +23,7 @@ namespace WebApi.Backend.Data
         }*/
 
 
-        public async Task<List<Cuenta>> GetAll()
+        public async Task<List<WebApp.FrontEnd.Models.Cuenta>> GetAll()
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {

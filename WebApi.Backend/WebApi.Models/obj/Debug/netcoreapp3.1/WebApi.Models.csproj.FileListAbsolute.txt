@@ -1,0 +1,9 @@
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\bin\Debug\netcoreapp3.1\WebApi.Models.deps.json
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\bin\Debug\netcoreapp3.1\WebApi.Models.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\bin\Debug\netcoreapp3.1\WebApi.Models.pdb
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.csprojAssemblyReference.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.AssemblyInfo.cs
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.dll
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApi.Models\obj\Debug\netcoreapp3.1\WebApi.Models.pdb
