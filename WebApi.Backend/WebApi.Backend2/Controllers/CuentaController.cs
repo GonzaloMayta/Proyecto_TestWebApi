@@ -20,79 +20,27 @@ namespace WebApi.Backend2.Controllers
  
 
         CuentaDomain cuentaDomain = new CuentaDomain();
-        /// <summary>
-        /// GET: api/Usuario (retorna toda la lista)
-        /// </summary>
-        /// <returns></returns>
-       // [ResponseType(typeof(IEnumerable<CuentaModels>))]
-        public IEnumerable<CuentaModels> Get()
-        {
-            return cuentaDomain.ListCuentas().ToArray();
-            //return users;
-        }
-
-
-
-
+       
         [HttpPost]
-        public int Post([FromBody] CuentaModels value)
+        public CuentaModels Post([FromBody] CuentaModels value)
         {
              return CuentaDomain.InsertarCuenta(value);
         }
 
 
-
-        /// <summary>
-        /// GET: api/Usuario/5 (retorna los valores de un sólo registro según el valor id)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-   /*     public IHttpActionResult Get(int id)
+        // GET api/<MovimientoController>/5
+        [HttpGet("{id}")]
+        public float Get(String Id)
         {
-            var usuario = cuentaDomain.ListUsers().ToArray().FirstOrDefault((p) => p.id == id);
-            //var usuario = users.FirstOrDefault((p) => p.id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-            return Ok(usuario);
+
+            return CuentaDomain.ConsultaSaldo(Id);
+        
         }
-   */
+
+
+
     }
 }
 
 
 
-/*
- // GET: api/<CuentaController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<CuentaController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CuentaController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<CuentaController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CuentaController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
- */

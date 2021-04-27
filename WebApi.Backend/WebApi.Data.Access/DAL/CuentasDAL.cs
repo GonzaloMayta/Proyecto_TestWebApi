@@ -1,10 +1,13 @@
 ﻿using System.Threading.Tasks;
 using WebApi.Models.Cuenta;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 
 using System.IO;
+using System.Data;
+using System;
+using Microsoft.Data.SqlClient;
 
 namespace WebApi.Data.Access.DAL
 {
@@ -42,7 +45,7 @@ namespace WebApi.Data.Access.DAL
 
 
         //*MOdelo1*/
-        public static int Inserta(CuentaModels c)
+        public static CuentaModels Inserta(CuentaModels c)
         {
             var configuracion = GetConfiguration();
 
@@ -65,10 +68,123 @@ namespace WebApi.Data.Access.DAL
                     i = 1;
                 }
                 //sql.Close();
-                return i;
+                return c;
             }
         }
 
+
+        
+        public static  float ConsultaSaldoAsync(string ID)
+        {
+            var configuracion = Config_StringDB.GetConfiguration();
+            float saldo = 0;
+            CuentaModels ccc = new CuentaModels();
+            float response = 0;
+            using (SqlConnection sql = new SqlConnection(configuracion.GetSection("ConnectionStrings").GetSection("DefaultConnection11").Value))
+            {
+                sql.Open();
+
+               
+                using (SqlCommand cmd= new SqlCommand("sp_ConsultaSaldo", sql))
+                {
+                    
+                    
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    SqlParameter paramID =
+                    new SqlParameter("@NRO_CUENTA", SqlDbType.VarChar, 14 );
+                    paramID.Value = ID;
+                    cmd.Parameters.Add(paramID);
+                   
+
+                    //cmd.Parameters.Add(new SqlParameter("@NRO_CUENTA", ID));
+
+                   // cmd.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Decimal).Direction = ParameterDirection.Output);
+
+                    SqlParameter paramSumary = new SqlParameter("@saldo", SqlDbType.Decimal);
+                    paramSumary.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(paramSumary);
+
+                    cmd.ExecuteNonQuery();
+                    //SqlDataReader read = cmd.ExecuteReader();
+
+                    response = (float)Convert.ToDouble(cmd.ExecuteScalar());
+                    
+/*
+                    SqlParameterCollection paramCollection = cmd.Parameters;
+                    string parameterList = "";
+
+                    string result = "";
+                    while (read.Read())
+                    {
+                         result = (string)read["saldo"];
+
+                    }
+
+
+
+                    /*
+                    for (int i = 0; i < paramCollection.Count; i++)
+                    {
+                        parameterList += String.Format("  {0}, {1}, {2}\n",
+                            paramCollection[i], paramCollection[i].DbType,
+                            paramCollection[i].Direction);
+                    }
+                    Console.WriteLine("Parameter Collection:\n" + parameterList);
+                    */
+                    // Execute the stored procedure; retrieve
+                    // and display the output parameter value.
+                    // cmd.ExecuteNonQuery();
+                    //Console.WriteLine((String)(paramSumary.Value));
+                    //response = (float)Convert.ToDecimal(result);
+
+
+
+                    /*
+                    SqlDataReader r=cmd.ExecuteReader();
+                    while (r.Read()) {
+                        Console.WriteLine(r["saldo"]);
+                        response = (float)r["saldo"];
+
+                    }
+
+                    Console.WriteLine(r["saldo"]);
+
+
+
+                    // cmd.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Decimal).Direction = ParameterDirection.Output);
+                    // Value response = null;
+                    //await sql.OpenAsync();
+                    /*
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while ( await reader.ReadAsync())
+                        {
+                            saldo = (float)reader["saldo"];
+                           // response = MapToValue(reader);
+                        }
+                    }
+
+
+
+
+
+
+                    /*int fila = cmd.ExecuteNonQuery();
+                    if (fila>0)
+                    {
+                        saldo = ((float)cmd.Parameters["@saldo"].Value);
+                    }*/
+
+                }
+
+            }
+
+
+
+
+                return response;
+        }
 
         
     }

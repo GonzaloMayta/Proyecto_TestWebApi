@@ -109,3 +109,4 @@ C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApp.FrontEnd\bin\De
 C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApp.FrontEnd\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApp.FrontEnd\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApp.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Views\Cuenta\Insertar.cshtml.g.cs
+C:\Users\Gonzalo\source\repos\Proyecto BCP\WebApi.Backend\WebApp.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Views\Movimiento\Movimientos.cshtml.g.cs

@@ -36,7 +36,7 @@ namespace WebApp.FrontEnd.Controllers
 
                StringContent content = new StringContent(JsonConvert.SerializeObject(c), Encoding.UTF8, "application/json");
 
-               using (var response = await httpClient.PostAsync("https://localhost:44394/api/Movimiento", content))
+               using (var response = await httpClient.PostAsync("", content))
                {
                    string apiResponse = await response.Content.ReadAsStringAsync();
                    received = JsonConvert.DeserializeObject<Movimiento>(apiResponse);

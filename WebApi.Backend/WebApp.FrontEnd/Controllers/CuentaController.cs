@@ -15,25 +15,28 @@ namespace WebApp.FrontEnd.Controllers
 
         string cuentaurl = "https://localhost:44320/api/Cuenta";
         
-        /**public IActionResult Insertar()
-        {
-            return View("Insertar");
-        }*/
-
         public ViewResult Insertar() => View();
         [HttpPost]
         public async Task<ActionResult> Insertar(Cuenta c)
         {
-            int received =0;
+            Cuenta received = new Cuenta();
             using (var client=new HttpClient())
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(c), Encoding.UTF8, "application/json");
 
                 using (var response = await client.PostAsync(cuentaurl, content))
                 {
+                                   
                     
                     string apiResponse = await response.Content.ReadAsStringAsync();
-                    //received = JsonConvert.DeserializeObject<int>(apiResponse);
+
+                    var result = response.StatusCode;
+                    //received = JsonConvert.DeserializeObject<Cuenta>(apiResponse);
+
+                    if (result.GetHashCode()==200)
+                    {
+                        return RedirectToAction("Insertar");
+                    }
                 }
             }
            // ModelState.AddModelError(string.Empty, "Error, contacta al administrador");

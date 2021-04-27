@@ -8,7 +8,7 @@ namespace WebApi.Domain
 {
     public class CuentaDomain
     {
-
+        /*
         public IEnumerable<CuentaModels> ListCuentas()
         {
             try
@@ -20,11 +20,20 @@ namespace WebApi.Domain
                 throw new Exception(ex.Message);
             }
         }
-
-        public static int InsertarCuenta(CuentaModels cm)
+        */
+        public static CuentaModels InsertarCuenta(CuentaModels cm)
         {
 
             return Cuenta.InsertarCuenta(cm);
         }
+
+        public static float ConsultaSaldo(String Id)
+        {
+
+              return Cuenta.ConsultaSaldo(Id);
+          
+        }
+
+
     }
 }

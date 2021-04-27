@@ -12,5 +12,8 @@ namespace WebApi.Models.Cuenta
         public string Nombre { get; set; }
         public float Saldo { get; set; }
 
+
+
     }
+
 }

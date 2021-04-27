@@ -23,28 +23,21 @@ namespace WebApi.Data.Business
             }
         }
 
-        public  static int InsertarCuenta(CuentaModels cuentamodelo)
+        public static float ConsultaSaldo(String Id)
+        {
+
+             return CuentasDAL.ConsultaSaldoAsync(Id);
+
+           // return 0;
+        }
+
+
+
+            public  static CuentaModels InsertarCuenta(CuentaModels cuentamodelo)
         {
 
             return CuentasDAL.Inserta(cuentamodelo);
-            /*
-            try
-
-            {
-
-               cc
-                    
-                    //Insert(cuentamodelo);
-
-            }
-
-            catch (Exception ex)
-
-            {
-
-                throw new Exception(ex.Message);
-
-            }*/
+           
         }
     }
 }

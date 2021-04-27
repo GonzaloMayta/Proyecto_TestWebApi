@@ -9,11 +9,16 @@ namespace WebApi.Domain
 {
     public class MovimientoDomain
     {
-        public static int Retiro(MovimientoModels movimientomodelo)
+        public static MovimientoModels Retiro(MovimientoModels movimientomodelo)
         {
 
             return Movimiento.Retiro(movimientomodelo);
-               
+        
+        }
+
+        public static MovimientoModels Deposito(MovimientoModels movimientomodels)
+        {
+            return Movimiento.Deposito(movimientomodels);
         }
     }
 }

@@ -27,19 +27,34 @@ namespace WebApi.Backend2.Controllers
         [HttpGet("{id}")]
         public float Get(MovimientoModels value)
         {
-            return MovimientoDomain.Retiro(value);
+            return 0;
+          //  return MovimientoDomain.Retiro(value);
         }
 
         // POST api/<MovimientoController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public MovimientoModels Movimiento([FromBody] MovimientoModels value)
         {
+           // if (flat==0)
+            //{
+                return MovimientoDomain.Deposito(value);
+            /*}
+            else
+            {
+                return MovimientoDomain.Retiro(value);
+            }*/
+            
         }
+
+
 
         // PUT api/<MovimientoController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(String id, [FromBody] MovimientoModels value)
         {
+
+            MovimientoModels temp = new MovimientoModels();
+
         }
 
         // DELETE api/<MovimientoController>/5

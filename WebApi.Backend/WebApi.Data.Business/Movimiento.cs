@@ -9,11 +9,17 @@ namespace WebApi.Data.Business
 {
     public class Movimiento
     {
-        public static int Retiro(MovimientoModels movimientomodelo)
+        public static MovimientoModels Retiro(MovimientoModels movimientomodelo)
         {
             CuentaModels cuenta = new CuentaModels();
             cuenta.NroCuenta=movimientomodelo.NroCuenta;
-            return MovimientoDAL.Retiro(movimientomodelo, cuenta);
+            return MovimientoDAL.Retiro(movimientomodelo);
         }
+
+        public static MovimientoModels Deposito(MovimientoModels movimientomodelo)
+        {
+            return MovimientoDAL.Deposito(movimientomodelo);
+
         }
+    }
 }
