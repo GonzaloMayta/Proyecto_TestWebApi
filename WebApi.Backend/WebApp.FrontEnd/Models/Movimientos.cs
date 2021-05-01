@@ -14,6 +14,6 @@ namespace WebApp.FrontEnd.Models
         [MinLength(13)]
         public string NroCuenta { get; set; }
         [Required]
-        public float Importe { get; set; }
+        public double Importe { get; set; }
     }
 }

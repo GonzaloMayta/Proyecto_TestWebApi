@@ -23,6 +23,7 @@ namespace WebApi.Data.Access.DAL
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@NRO_CUENTA", mov.NroCuenta));
+                    float a = mov.Importe;
                     cmd.Parameters.Add(new SqlParameter("@IMPORTEm", mov.Importe));
 
                    cmd.ExecuteNonQuery();

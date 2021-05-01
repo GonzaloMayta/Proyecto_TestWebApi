@@ -11,8 +11,7 @@ namespace WebApi.Data.Business
     {
         public static MovimientoModels Retiro(MovimientoModels movimientomodelo)
         {
-            CuentaModels cuenta = new CuentaModels();
-            cuenta.NroCuenta=movimientomodelo.NroCuenta;
+            
             return MovimientoDAL.Retiro(movimientomodelo);
         }
 

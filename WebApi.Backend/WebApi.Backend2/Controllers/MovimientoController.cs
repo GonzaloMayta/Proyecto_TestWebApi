@@ -17,12 +17,12 @@ namespace WebApi.Backend2.Controllers
 
         MovimientoDomain movimientoDomain = new MovimientoDomain();
         // GET: api/<MovimientoController>
-        [HttpGet]
+        /*[HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
-
+        */
         // GET api/<MovimientoController>/5
         [HttpGet("{id}")]
         public float Get(MovimientoModels value)
@@ -33,19 +33,26 @@ namespace WebApi.Backend2.Controllers
 
         // POST api/<MovimientoController>
         [HttpPost]
+        //[Route("api/Movimiento/{value}")]
         public MovimientoModels Movimiento([FromBody] MovimientoModels value)
-        {
-           // if (flat==0)
-            //{
-                return MovimientoDomain.Deposito(value);
-            /*}
-            else
-            {
-                return MovimientoDomain.Retiro(value);
-            }*/
-            
-        }
+                {
+                   // if (flat==0)
+                    //{
+                        return MovimientoDomain.Deposito(value);
+                    /*}
+                    else
+                    {
+                        return MovimientoDomain.Retiro(value);
+                    }*/
 
+            }
+        
+        [HttpPost("{deb}")]
+       // [Route("api/retiro/{value}")]
+        public MovimientoModels Retiro(String deb, [FromBody] MovimientoModels value)
+        {
+            return MovimientoDomain.Retiro(value);
+        }
 
 
         // PUT api/<MovimientoController>/5

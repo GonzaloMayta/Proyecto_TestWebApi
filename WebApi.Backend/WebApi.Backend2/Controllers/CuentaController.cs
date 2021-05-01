@@ -28,7 +28,7 @@ namespace WebApi.Backend2.Controllers
         }
 
 
-        // GET api/<MovimientoController>/5
+        // GET api/Consulta saldo
         [HttpGet("{id}")]
         public float Get(String Id)
         {

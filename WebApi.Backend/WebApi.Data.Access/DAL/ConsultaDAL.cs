@@ -18,7 +18,7 @@ namespace WebApi.Data.Access.DAL
 
             {
                 sql.Open();
-                int i = 0;
+                
                 using (SqlCommand cmd = new SqlCommand("sp_Transferencias", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
